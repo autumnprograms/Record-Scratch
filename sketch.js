@@ -13,8 +13,11 @@ function setup()
 function draw()
 {	
 	if (window.sensorsEnabled) {
-		text(x,50,50);
-		text(y,70,50);
-		text(z,90,50);
+		while(true)
+		{	
+			text(x,50,50);
+			text(y,70,50);
+			text(z,90,50);
+		}
 	}
 }
