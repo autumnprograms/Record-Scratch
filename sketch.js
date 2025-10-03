@@ -39,6 +39,8 @@ function draw()
 		text("X: " + orientationX.toFixed(1) + "°", width/2, (height/2)+50);
 		text("Y: " + orientationY.toFixed(1) + "°", width/2, (height/2)+70);
 		text("Z: " + orientationZ.toFixed(1) + "°", width/2, (height/2)+90);
+		text("Velocity Z: " + velocityZ.toFixed(1) + "°", width/2, (height/2)+90);
+
 	}
 
 }
