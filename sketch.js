@@ -36,9 +36,9 @@ function draw()
 			velocityZ = orientationZ - pRotationZ;
 
 			textSize(16);
-			text("X: " + orientationX.toFixed(1) + "°", width/2, height/2 - 80);
-			text("Y: " + orientationY.toFixed(1) + "°", width/2, height/2 - 60);
-			text("Z: " + orientationZ.toFixed(1) + "°", width/2, height/2 - 40);
+			text("X: " + orientationX.toFixed(1) + "°", width/2, height/2);
+			text("Y: " + orientationY.toFixed(1) + "°", width/2, height/2);
+			text("Z: " + orientationZ.toFixed(1) + "°", width/2, height/2);
 		}
 
 }
