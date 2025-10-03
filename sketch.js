@@ -23,22 +23,22 @@ function setup()
 function draw()
 {	
 	background(200,255,200)
+		if (window.sensorsEnabled) {
+			// Update orientation values from device sensors ONLY when enabled
+			orientationX = rotationX;
+			orientationY = rotationY;
+			orientationZ = rotationZ;
+			
+			// Calculate rotational velocity (change from previous frame)
+			// p5.js provides pRotationX, pRotationY, pRotationZ for previous frame values
+			velocityX = orientationX - pRotationX;
+			velocityY = orientationY - pRotationY;
+			velocityZ = orientationZ - pRotationZ;
 
-	       // Update orientation values from device sensors ONLY when enabled
-        orientationX = rotationX;
-        orientationY = rotationY;
-        orientationZ = rotationZ;
-        
-        // Calculate rotational velocity (change from previous frame)
-        // p5.js provides pRotationX, pRotationY, pRotationZ for previous frame values
-        velocityX = orientationX - pRotationX;
-        velocityY = orientationY - pRotationY;
-        velocityZ = orientationZ - pRotationZ;
-
-		textSize(16);
-		text("X: " + orientationX.toFixed(1) + "°", width/2, height/2 - 80);
-        text("Y: " + orientationY.toFixed(1) + "°", width/2, height/2 - 60);
-        text("Z: " + orientationZ.toFixed(1) + "°", width/2, height/2 - 40);
-
+			textSize(16);
+			text("X: " + orientationX.toFixed(1) + "°", width/2, height/2 - 80);
+			text("Y: " + orientationY.toFixed(1) + "°", width/2, height/2 - 60);
+			text("Z: " + orientationZ.toFixed(1) + "°", width/2, height/2 - 40);
+		}
 
 }
