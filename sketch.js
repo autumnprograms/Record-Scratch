@@ -13,7 +13,7 @@ function setup()
 function draw()
 {	
 	if (window.sensorsEnabled) {
-		while(true)
+		while(0 == 0)
 		{	
 			text(x,50,50);
 			text(y,70,50);
